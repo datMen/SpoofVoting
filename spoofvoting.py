@@ -127,7 +127,7 @@ class SpoofvotingPlugin(b3.plugin.Plugin):
             if sclient:
                 defaultvote = self.console.getCvar('g_allowvote').getInt()
                 self.console.write('g_allowvote "16"')
-                self.console.write('spoof %s callvote kick %s' % (client.cid, sclient.cid))
+                self.console.write('spoof %s callvote kick %s' % (client.cid, sclient.name))
                 self.console.write('g_allowvote "%s"' % defaultvote)
             else:
                 client.message('^7Invalid or missing data, try !help votekick')
